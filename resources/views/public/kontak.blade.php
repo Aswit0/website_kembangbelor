@@ -80,7 +80,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="insertdata" method="post" enctype="multipart/form-data" role="form" class="php-email-form">
+            <form action="insertData" method="post" enctype="multipart/form-data" role="form" class="php-email-form">
               @csrf
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -93,7 +93,7 @@
               <div class="form-group mt-3">
                 <select class="form-select" name="tujuan" id="tujuan" required>
                     <option value="">Pilih Tujuan</option>
-                    <option value="kritik_dan_saran">Kritik dan Saran</option>
+                    <option value="kritikSaran">Kritik dan Saran</option>
                     <option value="pertanyaan">Pertanyaan</option>
                 </select>
               </div>

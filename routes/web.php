@@ -13,7 +13,7 @@ Route::get('/', function () {
 });
 
 Route::get('/kontak',[kritiksaranConroller::class,'kontak'])->name('kontak');
-Route::post('/insertdata',[kritiksaranConroller::class,'insertdata'])->name('insertdata');
+Route::post('/insertData',[kritiksaranConroller::class,'insertData'])->name('insertData');
 
 Route::get('/360', function () {
     return view('public/360');

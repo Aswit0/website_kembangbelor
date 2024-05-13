@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('email');
-            $table->enum('tujuan',['kritiksaran','pertanyaan']);
+            $table->string('tujuan');
             $table->string('pesan');
             $table->timestamps();
         });

@@ -11,7 +11,7 @@ class kritiksaranConroller extends Controller
         return view('public/kontak');
     }
 
-    public function insertdata(Request $request){
+    public function insertData(Request $request){
         kritiksaran::create($request->all());
         return redirect()->route('kontak');
     }
