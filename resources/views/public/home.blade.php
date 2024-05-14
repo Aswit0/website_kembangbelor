@@ -31,7 +31,7 @@
 
 <body>
 
-  @include('layouts\navbar')
+  @include('layouts.navbar')
 
   <!-- ======= Landingpage ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -49,7 +49,6 @@
   
           <div class="section-title">
             <h2>Selamat Datang Di kembangbelor</h2>
-            <p>Sebuah desa di kecamatan Pacet yang memiliki keindahan yang luar biasa dari berbagai bidang. Mulai dari fasilitas yang lengkap, penginapan dan banyak wisata yang sangat indah untuk dinikmati</p>
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
@@ -67,7 +66,6 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Sebuah desa di kecamatan Pacet yang memiliki keindahan yang luar biasa dari berbagai bidang. Mulai dari fasilitas yang lengkap, penginapan dan banyak wisata yang sangat indah untuk dinikmati</p>
         </div>
 
         <div class="row">
@@ -80,7 +78,7 @@
                 <i class="bi bi-tree"></i>
               </div>
               <h4><a href="">Tempat Wisata</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <p>Desa Kembangbelor merupakan salah satu yang terletak di Kecamatan Pacet, Kota Mojokerto, Jawa Timur, Indonesia. Desa ini memiliki tempat wisata menarik seperti Bernah De Vallei dan Klurak Eco Park.</p>
             </div>
           </div>
 
@@ -93,7 +91,7 @@
                 <i class="bi bi-snow"></i>
               </div>
               <h4><a href="">Sejuk</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <p>Dikelilingi oleh udara sejuk dan hijaunya pepohonan, Desa Kembangbelor menjadi tempat yang sempurna bagi para pencinta alam yang mencari ketenangan dan keindahan alam yang autentik. Dengan kombinasi keindahan alam yang memukau dan suasana sejuk yang menyegarkan, desa ini menjadi destinasi yang tak terlupakan bagi pengunjungnya.</p>
             </div>
           </div>
 
@@ -106,7 +104,7 @@
                 <i class="bi bi-fire"></i>
               </div>
               <h4><a href="">Camping Ground</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <p>Camping ground di  Wisata Desa Kembangbelor dilengkapi dengan fasilitas yang memadai untuk kenyamanan para pengunjung, seperti tempat berkemah yang luas, area api unggun, dan fasilitas toilet. Dengan fasilitas yang lengkap, pengunjung dapat menikmati pengalaman berkemah tanpa harus khawatir akan kebutuhan dasar mereka.</p>
             </div>
           </div>
 
@@ -121,8 +119,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Sebuah desa di kecamatan Pacet yang memiliki keindahan yang luar biasa dari berbagai bidang. Mulai dari fasilitas yang lengkap, penginapan dan banyak wisata yang sangat indah untuk dinikmati</p>
+          <h2>Tempat Wisata</h2>
         </div>
         <div class="col-md-12 mb-4 d-flex justify-content-end">
           <a href="/wisata" class="lihat-selengkapnya-link">Lihat Selengkapnya</a>
@@ -135,7 +132,8 @@
                     <img src="build/assets/img/wisata1.jpg" class="card-img-top wisata-img-top" alt="Image">
                     <div class="card-body">
                         <h5 class="card-title">Klurak Eco Park</h5>
-                        <p class="card-text">Sebuah tempat yang berada di alam yang memiliki kolam renang dengan suasana yang sejuk.</p>
+                        <p class="card-text">Klurak Eco Park adalah destinasi lain yang menawarkan pengalaman berwisata yang menyegarkan. Terletak di tengah hutan yang lebat, tempat ini menghadirkan udara sejuk yang cocok untuk bersantai dan melepas penat. Pengunjung dapat menjelajahi trek-trek hiking yang menarik atau sekadar duduk-duduk di tepi sungai sambil menikmati suasana alam yang tenang dan damai.
+                        </p>
                     </div>
                 </div>
             </a>
@@ -146,7 +144,8 @@
                     <img src="build/assets/img/wisata2.jpg" class="card-img-top wisata-img-top" alt="Image">
                     <div class="card-body">
                         <h5 class="card-title">Bernah De Vallei</h5>
-                        <p class="card-text">Tempat yang cocok untuk melakukan kegiatan outdor bersama keluarga maupun teman terdekat.</p>
+                        <p class="card-text">Bernah De Vallei merupakan magnet bagi para pencari ketenangan dan keindahan alam. Terletak di tengah lembah yang hijau, tempat wisata ini menawarkan suasana sejuk yang menyegarkan di bawah naungan pepohonan rindang. Suara gemericik air sungai yang mengalir menambah kesan damai bagi pengunjung yang datang. Di sini, Anda dapat merasakan kesegaran udara pegunungan sambil menikmati panorama alam yang menakjubkan.
+                        </p>
                     </div>
                 </div>
             </a>
@@ -157,7 +156,7 @@
                     <img src="build/assets/img/wisata3.jpg" class="card-img-top wisata-img-top" alt="Image">
                     <div class="card-body">
                         <h5 class="card-title">Bernah Camping Ground</h5>
-                        <p class="card-text">Lokasi yang berada di tengah hutan menjadikan suasana yang cocok untuk mendirikan tenda dan membuat api unggun.</p>
+                        <p class="card-text">Desa Kembangbelor juga menawarkan fasilitas champing ground yang nyaman bagi para petualang yang mencari pengalaman berkemah yang autentik. Di bawah langit malam yang berbintang, pengunjung dapat merasakan sejuknya udara pegunungan sambil berkumpul di sekitar api unggun. Suasana alam yang tenang dan sejuk membuat pengalaman berkemah di Desa Kembangbelor menjadi momen yang tak terlupakan bagi setiap pengunjung.</p>
                     </div>
                 </div>
             </a>
@@ -173,7 +172,6 @@
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Sebuah desa di kecamatan Pacet yang memiliki keindahan yang luar biasa dari berbagai bidang. Mulai dari fasilitas yang lengkap, penginapan dan banyak wisata yang sangat indah untuk dinikmati</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">

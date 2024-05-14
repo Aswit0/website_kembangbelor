@@ -2,24 +2,20 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\FasilitasResource\Pages;
+use App\Filament\Resources\FasilitasResource\RelationManagers;
+use App\Models\Fasilitas;
 use Filament\Forms;
-use Filament\Tables;
-use App\Models\Vendor;
 use Filament\Forms\Form;
-use Filament\Tables\Table;
 use Filament\Resources\Resource;
-use Filament\Forms\Components\Toggle;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\VendorResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\VendorResource\RelationManagers;
 
-class VendorResource extends Resource
+class FasilitasResource extends Resource
 {
-    protected static ?string $model = Vendor::class;
+    protected static ?string $model = Fasilitas::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -27,7 +23,7 @@ class VendorResource extends Resource
     {
         return $form
             ->schema([
-                
+                //
             ]);
     }
 
@@ -35,20 +31,13 @@ class VendorResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('user_id'),
-                TextColumn::make('id_event'),
-                TextColumn::make('needed_at'),
-                TextColumn::make('tanggal_daftar'),
-                ToggleColumn::make('is_accept'),                
-                TextColumn::make('title'),
-                ImageColumn::make('poster_url'),
+                //
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -67,9 +56,9 @@ class VendorResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListVendors::route('/'),
-            'create' => Pages\CreateVendor::route('/create'),
-            'edit' => Pages\EditVendor::route('/{record}/edit'),
+            'index' => Pages\ListFasilitas::route('/'),
+            'create' => Pages\CreateFasilitas::route('/create'),
+            'edit' => Pages\EditFasilitas::route('/{record}/edit'),
         ];
     }
 }

@@ -31,7 +31,7 @@
 
 <body>
 
-  @include('layouts\navbar')
+  @include('layouts.navbar')
 
 
     <!-- ======= wisata Section ======= -->
@@ -40,7 +40,6 @@
 
         <div class="section-title">
           <h2 class="mt-5">Wisata</h2>
-          <p>Sebuah desa di kecamatan Pacet yang memiliki keindahan yang luar biasa dari berbagai bidang. Mulai dari fasilitas yang lengkap, penginapan dan banyak wisata yang sangat indah untuk dinikmati</p>
         </div>
 
       

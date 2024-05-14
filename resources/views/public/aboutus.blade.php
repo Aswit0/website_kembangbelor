@@ -31,7 +31,7 @@
 
 <body>
 
-  @include('layouts\navbar')
+  @include('layouts.navbar')
 
   <!-- ======= Footer ======= -->
 <footer id="footer">

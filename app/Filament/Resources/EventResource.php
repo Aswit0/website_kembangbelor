@@ -8,8 +8,12 @@ use App\Models\Event;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Toggle;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\EventResource\Pages;
@@ -26,7 +30,13 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('title'),
+                TextInput::make('description'),
+                TextInput::make('event_needed'),
+                TextInput::make('location'),
+                FileUpload::make('poster_url')->directory('event'),
+                Toggle::make('is_open'),                
+                DatePicker::make('event_started'),
             ]);
     }
 
@@ -34,19 +44,21 @@ class EventResource extends Resource
     {
         return $table
             ->columns([
+                ImageColumn::make('poster_url'),
                 TextColumn::make('title'),
                 TextColumn::make('description'),
                 TextColumn::make('event_needed'),
-                TextColumn::make('location'),
-                ImageColumn::make('poster_url'),
-                ToggleColumn::make('is_open'),                
                 TextColumn::make('event_started'),
+                ToggleColumn::make('is_open'),                
+                TextColumn::make('nama_wisata'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

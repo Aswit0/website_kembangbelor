@@ -31,7 +31,7 @@
 
 <body>
 
-  @include('layouts\navbar')
+  @include('layouts.navbar')
 
   <main id="main">
 
@@ -40,8 +40,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>360</h2>
-          <p>Sebuah desa di kecamatan Pacet yang memiliki keindahan yang luar biasa dari berbagai bidang. Mulai dari fasilitas yang lengkap, penginapan dan banyak wisata yang sangat indah untuk dinikmati</p>
+          <h2>Galeri</h2>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">

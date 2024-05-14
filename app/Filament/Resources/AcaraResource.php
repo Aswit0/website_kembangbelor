@@ -4,23 +4,22 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Wisata;
+use App\Models\Acara;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\DatePicker;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\WisataResource\Pages;
+use App\Filament\Resources\AcaraResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\WisataResource\RelationManagers;
+use App\Filament\Resources\AcaraResource\RelationManagers;
 
-class WisataResource extends Resource
+class AcaraResource extends Resource
 {
-    protected static ?string $model = Wisata::class;
+    protected static ?string $model = Acara::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -28,10 +27,13 @@ class WisataResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('desc')->required(),
-                TextInput::make('htm')->required(),
-                FileUpload::make('imageUrl')->required(),
+                Card::make()
+                    ->schema([
+                        TextInput::make('nama_acara')->required(),
+                        DatePicker::make('tanggalMulai')->required(),
+                        DatePicker::make('tanggalSelesai')->required(),
+                    ])
+                    ->columns(1),
             ]);
     }
 
@@ -39,10 +41,9 @@ class WisataResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('desc'),
-                TextColumn::make('htm'),
-                ImageColumn::make('imageUrl'),
+                TextColumn::make('nama_acara'),
+                TextColumn::make('tanggalMulai'),
+                TextColumn::make('tanggalSelesai'),
             ])
             ->filters([
                 //
@@ -53,7 +54,7 @@ class WisataResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -68,9 +69,9 @@ class WisataResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListWisatas::route('/'),
-            'create' => Pages\CreateWisata::route('/create'),
-            'edit' => Pages\EditWisata::route('/{record}/edit'),
+            'index' => Pages\ListAcaras::route('/'),
+            'create' => Pages\CreateAcara::route('/create'),
+            'edit' => Pages\EditAcara::route('/{record}/edit'),
         ];
     }
 }

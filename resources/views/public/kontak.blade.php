@@ -34,7 +34,7 @@
 
 <body>
 
-@include('layouts\navbar')
+@include('layouts.navbar')
 
 <main id="main">
 
@@ -44,9 +44,8 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
-        @include('layouts\accordion')
+        @include('layouts.accordion')
 
         <div>
           <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.2835118383477!2d112.55627611105797!3d-7.652633592331763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78770c28200469%3A0x4d3ca4c81c8e5363!2sBernah%20De%20Vallei!5e0!3m2!1sid!2sid!4v1712490080946!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
