@@ -35,6 +35,15 @@ h6 {
   }
 }
 
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -78,13 +87,13 @@ h6 {
 .back-to-top {
   position: fixed;
   visibility: hidden;
-  opacity: 0;
-  left: 15px;
-  bottom: 15px;
+  opacity: 50%;
+  left: 20px;
+  bottom: 20px;
   z-index: 996;
   background: #049C4F;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
   transition: all 0.4s;
 }

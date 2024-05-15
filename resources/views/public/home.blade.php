@@ -30,6 +30,7 @@
 <body>
 
   @include('layouts.navbar')
+  @include('layouts.float-button')
 
   <!-- ======= Landingpage ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -41,26 +42,54 @@
   </section>
   <!-- End  Landingpage -->
   <section id="services" class="services">
-    <div class="container" data-aos="fade-up">
-
+    <div "container" data-aos="fade-up">
       <div class="section-title">
-        <h2>Acara</h2>
+        <h2>Event</h2>
       </div>
-@foreach ($data as $row)
-    
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card" style="width: 18rem;">
-    <h5 class="card-title">{{ $row->title }}</h5>
-      <div class="card-body">
-        <p class="card-text">{{ $row->description }}</p>
-        <p class="card-text">Tanggal Mulai: {{ $row->event_started }}</p>
-      </div>
-      <img src="{{ $row->poster_url }}" class="card-img-top" alt="event">
-    </div>
-  </div>  
-</div>
-@endforeach
+<!-- Add Bootstrap CSS in your <head> if not already included -->
+  {{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> --}}
+
+  <div class="row justify-content-center">
+      @foreach ($data as $row)
+          <div class="col-md-4 mb-4">
+              <div class="card mx-auto p-1" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#detailModal{{ $row->id }}">
+                  <div class="card-body">
+                    <img src="{{ $row->poster_url }}" class="card-img-top" alt="event">
+                      <h5 class="card-title text-center fw-bold mt-1 ">{{ $row->title }}</h5>
+                      <p class="card-text text-center fw-bold">Tanggal Mulai: {{ $row->event_started }}</p>
+                      
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="detailModal{{ $row->id }}" tabindex="-1" aria-labelledby="detailModalLabel{{ $row->id }}" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title fw-bold" id="detailModalLabel{{ $row->id }}">{{ $row->title }}</h5>
+                          {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button> --}}
+                      </div>
+                      <div class="modal-body">
+                          <img src="{{ $row->poster_url }}" class="img-fluid mb-3" alt="event">
+                          <p>{{ $row->description }}</p>
+                          <p class="fw-bold">Tanggal Mulai: {{ $row->event_started }}</p>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      @endforeach
+      
+  </div>
+  
+  <!-- Add Bootstrap JS and dependencies before the closing </body> tag if not already included -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 
 
     </div>
@@ -86,7 +115,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <h2>Layanan</h2>
         </div>
 
         <div class="row">
@@ -172,7 +201,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
+          <h2>Review pengunjung</h2>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -250,22 +279,13 @@
       </div>
     </section><!-- End Testimonials Section -->
 
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Kembangbelor</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="/about">Politeknik Negeri Jember</a> 2024
-      </div>
-    </div>
-  </footer>
+  @include('layouts.footer')
   <!-- End  Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -275,7 +295,6 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <script src="assets/js/main.js"></script>
-  @include('layouts.float-button')
 
 </body>
 

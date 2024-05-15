@@ -30,16 +30,14 @@
 <body>
 
   @include('layouts.navbar')
+  @include('layouts.float-button')
 
 
-  <section id="services" class="services">
+  <section id="services" class="services mt-5">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
             <h2>Tempat Wisata</h2>
-        </div>
-        <div class="col-md-12 mb-4 d-flex justify-content-end">
-            <a href="/wisata" class="lihat-selengkapnya-link">Lihat Selengkapnya</a>
         </div>
 
         <div class="row">
@@ -63,16 +61,7 @@
 
 
 <!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Kembangbelor</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      Designed by <a href="/about">Politeknik Negeri Jember</a> 2024
-    </div>
-  </div>
-</footer>
+@include('layouts.footer')
 <!-- End  Footer -->
 
 <div id="preloader"></div>
