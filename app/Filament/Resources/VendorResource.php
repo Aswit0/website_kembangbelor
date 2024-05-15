@@ -41,7 +41,7 @@ class VendorResource extends Resource
                 TextColumn::make('tanggal_daftar'),
                 ToggleColumn::make('is_accept'),                
                 TextColumn::make('title'),
-                ImageColumn::make('poster_url'),
+                ImageColumn::make('id_event.poster_url'),
             ])
             ->filters([
                 //

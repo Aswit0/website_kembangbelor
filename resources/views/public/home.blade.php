@@ -6,26 +6,24 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Kembangbelor</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- icon web -->
-  <link href="build/assets/img/logo.png" rel="icon">
-  <link href="build/assets/img/logo.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="build/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="build/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="build/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  {{-- <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> --}}
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="build/assets/css/style.css" rel="stylesheet">
+  <!--  Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -42,7 +40,30 @@
     </div>
   </section>
   <!-- End  Landingpage -->
+  <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
 
+      <div class="section-title">
+        <h2>Acara</h2>
+      </div>
+@foreach ($data as $row)
+    
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem;">
+    <h5 class="card-title">{{ $row->title }}</h5>
+      <div class="card-body">
+        <p class="card-text">{{ $row->description }}</p>
+        <p class="card-text">Tanggal Mulai: {{ $row->event_started }}</p>
+      </div>
+      <img src="{{ $row->poster_url }}" class="card-img-top" alt="event">
+    </div>
+  </div>  
+</div>
+@endforeach
+
+
+    </div>
       <!-- ======= About Section ======= -->
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
@@ -91,7 +112,7 @@
                 <i class="bi bi-snow"></i>
               </div>
               <h4><a href="">Sejuk</a></h4>
-              <p>Dikelilingi oleh udara sejuk dan hijaunya pepohonan, Desa Kembangbelor menjadi tempat yang sempurna bagi para pencinta alam yang mencari ketenangan dan keindahan alam yang autentik. Dengan kombinasi keindahan alam yang memukau dan suasana sejuk yang menyegarkan, desa ini menjadi destinasi yang tak terlupakan bagi pengunjungnya.</p>
+              <p>Dikelilingi oleh udara sejuk dan hijaunya pepohonan, Desa Kembangbelor menjadi tempat yang sempurna bagi para pencinta alam yang mencari ketenangan dan keindahan alam yang autentik.</p>
             </div>
           </div>
 
@@ -104,7 +125,7 @@
                 <i class="bi bi-fire"></i>
               </div>
               <h4><a href="">Camping Ground</a></h4>
-              <p>Camping ground di  Wisata Desa Kembangbelor dilengkapi dengan fasilitas yang memadai untuk kenyamanan para pengunjung, seperti tempat berkemah yang luas, area api unggun, dan fasilitas toilet. Dengan fasilitas yang lengkap, pengunjung dapat menikmati pengalaman berkemah tanpa harus khawatir akan kebutuhan dasar mereka.</p>
+              <p>Camping ground di  Wisata Desa Kembangbelor dilengkapi dengan fasilitas yang memadai untuk kenyamanan para pengunjung, seperti tempat berkemah yang luas, area api unggun, dan fasilitas toilet.</p>
             </div>
           </div>
 
@@ -117,53 +138,33 @@
     <!-- ======= wisata Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Tempat Wisata</h2>
-        </div>
-        <div class="col-md-12 mb-4 d-flex justify-content-end">
-          <a href="/wisata" class="lihat-selengkapnya-link">Lihat Selengkapnya</a>
+  
+          <div class="section-title">
+              <h2>Tempat Wisata</h2>
+          </div>
+          <div class="col-md-12 mb-4 d-flex justify-content-end">
+              <a href="/wisata" class="lihat-selengkapnya-link">Lihat Selengkapnya</a>
+          </div>
+  
+          <div class="row">
+              @foreach ($wisata as $row)
+              <div class="col-md-4 mb-4">
+                  <a href="/wisata-detail" class="wisata-link">
+                      <div class="card wisata-card">
+                          <img src="{{ $row->imageUrl }}" class="card-img-top wisata-img-top" alt="Image">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ $row->name }}</h5>
+                              <p class="card-text">{{ $row->desc }}</p>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              @endforeach
+          </div>
+  
       </div>
-      
-      <div class="row">
-        <div class="col-md-4 mb-4"> 
-            <a href="/wisata-detail" class="wisata-link">
-                <div class="card wisata-card">
-                    <img src="build/assets/img/wisata1.jpg" class="card-img-top wisata-img-top" alt="Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Klurak Eco Park</h5>
-                        <p class="card-text">Klurak Eco Park adalah destinasi lain yang menawarkan pengalaman berwisata yang menyegarkan. Terletak di tengah hutan yang lebat, tempat ini menghadirkan udara sejuk yang cocok untuk bersantai dan melepas penat. Pengunjung dapat menjelajahi trek-trek hiking yang menarik atau sekadar duduk-duduk di tepi sungai sambil menikmati suasana alam yang tenang dan damai.
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 mb-4"> 
-            <a href="/wisata-detail" class="wisata-link">
-                <div class="card wisata-card">
-                    <img src="build/assets/img/wisata2.jpg" class="card-img-top wisata-img-top" alt="Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Bernah De Vallei</h5>
-                        <p class="card-text">Bernah De Vallei merupakan magnet bagi para pencari ketenangan dan keindahan alam. Terletak di tengah lembah yang hijau, tempat wisata ini menawarkan suasana sejuk yang menyegarkan di bawah naungan pepohonan rindang. Suara gemericik air sungai yang mengalir menambah kesan damai bagi pengunjung yang datang. Di sini, Anda dapat merasakan kesegaran udara pegunungan sambil menikmati panorama alam yang menakjubkan.
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 mb-4"> 
-            <a href="/wisata-detail" class="wisata-link">
-                <div class="card wisata-card">
-                    <img src="build/assets/img/wisata3.jpg" class="card-img-top wisata-img-top" alt="Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Bernah Camping Ground</h5>
-                        <p class="card-text">Desa Kembangbelor juga menawarkan fasilitas champing ground yang nyaman bagi para petualang yang mencari pengalaman berkemah yang autentik. Di bawah langit malam yang berbintang, pengunjung dapat merasakan sejuknya udara pegunungan sambil berkumpul di sekitar api unggun. Suasana alam yang tenang dan sejuk membuat pengalaman berkemah di Desa Kembangbelor menjadi momen yang tak terlupakan bagi setiap pengunjung.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-      </section>
+  </section>
+  
         <!-- End  wisata section -->
 
             <!-- ======= Testimonials Section ======= -->
@@ -179,7 +180,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="build/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <p>
@@ -192,7 +193,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="build/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <p>
@@ -205,7 +206,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="build/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
                 <p>
@@ -218,7 +219,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="build/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
                 <p>
@@ -231,7 +232,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="build/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
                 <p>
@@ -266,16 +267,15 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="build/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="build/assets/vendor/aos/aos.js"></script>
-  <script src="build/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="build/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="build/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="build/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="build/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="build/assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <script src="build/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+  @include('layouts.float-button')
 
 </body>
 

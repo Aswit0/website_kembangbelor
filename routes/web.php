@@ -1,27 +1,26 @@
 <?php
 
-use App\Http\Controllers\kritiksaranConroller;
+use App\Http\Controllers\galeriController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\wisataController;
+use App\Http\Controllers\kritiksaranConroller;
 use App\Http\Controllers\kritiksaranController;
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });  
 
-Route::get('/', function () {
-    return view('public/home');
-});
+
+
+Route::get('/',[homeController::class,'acara'])->name('acara');
+
+Route::get('/wisata',[wisataController::class,'wisata'])->name('wisata');
 
 Route::get('/kontak',[kritiksaranConroller::class,'kontak'])->name('kontak');
 Route::post('/insertData',[kritiksaranConroller::class,'insertData'])->name('insertData');
 
-Route::get('/360', function () {
-    return view('public/360');
-});
-
-Route::get('/wisata', function () {
-    return view('public/wisata');
-});
+Route::get('/galeri',[galeriController::class,'galeri'])->name('galeri');
 
 Route::get('/wisata-detail', function () {
     return view('layouts/wisata-details');
@@ -38,9 +37,6 @@ Route::get('/adminWisata', function () {
     return view('admin/wisata');
 });
 
-
-
-
 Route::get('/admin360', function () {
     return view('admin/360');
 });
@@ -56,7 +52,6 @@ Route::get('/adminNews', function () {
 Route::get('/adminRiwayat', function () {
     return view('admin/riwayat');
 });
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');

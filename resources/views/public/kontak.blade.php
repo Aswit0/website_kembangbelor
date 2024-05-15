@@ -6,26 +6,24 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Kembangbelor</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- icon web -->
-  <link href="build/assets/img/logo.png" rel="icon">
-  <link href="build/assets/img/logo.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="build/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="build/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="build/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="build/assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 <style>
     
@@ -45,7 +43,6 @@
         <div class="section-title">
           <h2>Contact</h2>
         </div>
-        @include('layouts.accordion')
 
         <div>
           <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.2835118383477!2d112.55627611105797!3d-7.652633592331763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78770c28200469%3A0x4d3ca4c81c8e5363!2sBernah%20De%20Vallei!5e0!3m2!1sid!2sid!4v1712490080946!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
@@ -78,7 +75,9 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
+            <div class="section-title">
+              <h3>Kritik dan saran</h3>
+            </div>
             <form action="insertData" method="post" enctype="multipart/form-data" role="form" class="php-email-form">
               @csrf
               <div class="row">
@@ -133,17 +132,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="build/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="build/assets/vendor/aos/aos.js"></script>
-  <script src="build/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="build/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="build/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="build/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="build/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="build/assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="build/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

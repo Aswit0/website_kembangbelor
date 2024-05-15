@@ -32,6 +32,7 @@
 <body>
 
   @include('layouts.navbar')
+  @include('layouts.float-button')
 
   <!-- ======= Footer ======= -->
 <footer id="footer">

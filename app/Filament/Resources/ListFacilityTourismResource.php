@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FasilitasResource\Pages;
-use App\Filament\Resources\FasilitasResource\RelationManagers;
-use App\Models\Fasilitas;
+use App\Filament\Resources\ListFacilityTourismResource\Pages;
+use App\Filament\Resources\ListFacilityTourismResource\RelationManagers;
+use App\Models\list_facility_tourism;
+use App\Models\ListFacilityTourism;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +14,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FasilitasResource extends Resource
+class ListFacilityTourismResource extends Resource
 {
-    protected static ?string $model = Fasilitas::class;
+    protected static ?string $model = list_facility_tourism::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -56,9 +57,9 @@ class FasilitasResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListFasilitas::route('/'),
-            'create' => Pages\CreateFasilitas::route('/create'),
-            'edit' => Pages\EditFasilitas::route('/{record}/edit'),
+            'index' => Pages\ListListFacilityTourisms::route('/'),
+            'create' => Pages\CreateListFacilityTourism::route('/create'),
+            'edit' => Pages\EditListFacilityTourism::route('/{record}/edit'),
         ];
     }
 }

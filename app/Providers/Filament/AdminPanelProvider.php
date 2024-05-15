@@ -31,10 +31,10 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Green,
             ])
             ->font('Poppins')
-            ->brandLogo(asset('build/assets/img/logo.png'))
+            ->brandLogo(asset('assets/img/logo.png'))
             // ->brandName('Kembangbelor');
             ->brandLogoHeight('3rem')
-            ->favicon(asset('build/assets/img/logo.png'))            
+            ->favicon(asset('assets/img/logo.png'))            
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([

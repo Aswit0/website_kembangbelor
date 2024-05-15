@@ -8,6 +8,7 @@ use App\Models\Event;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Toggle;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
@@ -30,13 +31,18 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('title'),
-                TextInput::make('description'),
-                TextInput::make('event_needed'),
-                TextInput::make('location'),
-                FileUpload::make('poster_url')->directory('event'),
-                Toggle::make('is_open'),                
-                DatePicker::make('event_started'),
+                Card::make()
+                ->schema([
+                    TextInput::make('title'),
+                    TextInput::make('description'),
+                    TextInput::make('event_needed'),
+                    TextInput::make('location'),
+                    FileUpload::make('poster_url')->directory('event'),
+                    Toggle::make('is_open'),                
+                    DatePicker::make('event_started'),
+                ])
+                    ->columns(1),
+                
             ]);
     }
 
