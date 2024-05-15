@@ -7,6 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class event extends Model
 {
-    use HasFactory;
     protected $guarded = [];
+
+    public function getLocationAttribute($value)
+    {
+        switch ($value) {
+            case 1:
+                return 'Bernah de Vallei';
+            case 2:
+                return 'Klurak Eco Park';
+            default:
+                return 'Unknown Location';
+        }
+    }
 }

@@ -33,13 +33,13 @@ class EventResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
-                    TextInput::make('title'),
-                    TextInput::make('description'),
-                    TextInput::make('event_needed'),
-                    TextInput::make('location'),
-                    FileUpload::make('poster_url')->directory('event'),
-                    Toggle::make('is_open'),                
-                    DatePicker::make('event_started'),
+                    TextInput::make('title')->label('Judul'),
+                    TextInput::make('description')->label('Deskripsi'),
+                    TextInput::make('event_needed')->label('Kebutuhan Event'),
+                    TextInput::make('location')->label('Lokasi'),
+                    FileUpload::make('poster_url')->directory('event')->label('Gambar'),
+                    Toggle::make('is_open')->label('Terbuka'),                
+                    DatePicker::make('event_started')->label('Event Dimulai'),
                 ])
                     ->columns(1),
                 
@@ -50,13 +50,13 @@ class EventResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('poster_url'),
-                TextColumn::make('title'),
-                TextColumn::make('description'),
-                TextColumn::make('event_needed'),
-                TextColumn::make('event_started'),
-                ToggleColumn::make('is_open'),                
-                TextColumn::make('nama_wisata'),
+                TextColumn::make('location')->label('Lokasi'),
+                ImageColumn::make('poster_url')->label('Gambar'),
+                TextColumn::make('title')->label('Judul'),
+                TextColumn::make('description')->label('Deskripsi'),
+                TextColumn::make('event_needed')->label('Kebutuhan Event'),
+                TextColumn::make('event_started')->label('Event Dimulai'),
+                ToggleColumn::make('is_open')->label('Terbuka'),                
             ])
             ->filters([
                 //

@@ -4,7 +4,6 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ListFacilityTourismResource\Pages;
 use App\Filament\Resources\ListFacilityTourismResource\RelationManagers;
-use App\Models\list_facility_tourism;
 use App\Models\ListFacilityTourism;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -16,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ListFacilityTourismResource extends Resource
 {
-    protected static ?string $model = list_facility_tourism::class;
+    protected static ?string $model = ListFacilityTourism::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

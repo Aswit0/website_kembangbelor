@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class list_facility_tourism extends Model
+class ListFacilityTourism extends Model
 {
-    protected $guarded = [];
+    use HasFactory;
 }

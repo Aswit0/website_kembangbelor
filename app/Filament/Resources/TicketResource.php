@@ -27,7 +27,7 @@ class TicketResource extends Resource
     {
         return $form
             ->schema([
-                        
+                
             ]);
     }
 
@@ -35,13 +35,11 @@ class TicketResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('checkin_at'),
-                TextColumn::make('user_id'),
-                TextColumn::make('tourism_id'),
-                TextColumn::make('added_at'),
-                ToggleColumn::make('is_checkin'),                
-                TextColumn::make('qty'),
-                TextColumn::make('qty'),
+                TextColumn::make('tourism_name')->label('Nama Wisata'),
+                TextColumn::make('checkin_at')->label('Check in Pada'),
+                TextColumn::make('added_at')->label('Ditambahkan pada'),
+                ToggleColumn::make('is_checkin')->label('Sudah Check in'),                
+                TextColumn::make('qty')->label('Jumlah'),
             ])
             ->filters([
                 //

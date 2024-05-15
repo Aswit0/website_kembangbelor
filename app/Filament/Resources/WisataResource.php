@@ -13,6 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TimePicker;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\WisataResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -28,10 +29,14 @@ class WisataResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('desc')->required(),
-                TextInput::make('htm')->required(),
-                FileUpload::make('imageUrl')->required(),
+                TextInput::make('name')->required()->label('Nama Wisata'),
+                TextInput::make('desc')->required()->label('Deskripsi'),
+                TextInput::make('htm')->required()->label('Tiket Masuk'),
+                FileUpload::make('imageUrl')->required()->directory('wisata')->label('Gambar'),
+                TextInput::make('whatsapp')->required()->label('Nomor'),
+                TextInput::make('maps')->required()->label('Maps'),
+                TimePicker::make('jamBuka')->required()->label('Jam Buka'),
+                TimePicker::make('jamTutup')->required()->label('Jam Tutup'),
             ]);
     }
 
@@ -39,10 +44,14 @@ class WisataResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('desc'),
-                TextColumn::make('htm'),
-                ImageColumn::make('imageUrl'),
+                TextColumn::make('name')->label('Nama Wisata'),
+                TextColumn::make('desc')->label('Deskripsi'),
+                TextColumn::make('htm')->label('Tiket Masuk'),
+                ImageColumn::make('imageUrl')->label('Gambar'),
+                TextColumn::make('whatsapp')->label('Nomor'),
+                TextColumn::make('maps')->label('Maps'),
+                TextColumn::make('jamBuka')->label('Jam Buka'),
+                TextColumn::make('jamTutup')->label('Jam Tutup'),
             ])
             ->filters([
                 //
