@@ -43,7 +43,7 @@
         <div class="row">
             @foreach ($wisata as $row)
             <div class="col-md-4 mb-4">
-                <a href="/wisata-detail" class="wisata-link">
+                <a href="/wisata-details/{{ $row->id }}">
                     <div class="card wisata-card">
                         <img src="{{ $row->imageUrl }}" class="card-img-top wisata-img-top" alt="Image">
                         <div class="card-body">

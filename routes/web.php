@@ -22,9 +22,7 @@ Route::post('/insertData',[kritiksaranConroller::class,'insertData'])->name('ins
 
 Route::get('/galeri',[galeriController::class,'galeri'])->name('galeri');
 
-Route::get('/wisata-detail', function () {
-    return view('layouts/wisata-details');
-});
+Route::get('/wisata-details/{id}', [HomeController::class,'show'])->name('show');
 
 Route::get('/about', function () {
     return view('public/aboutus');

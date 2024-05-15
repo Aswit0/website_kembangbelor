@@ -10,4 +10,6 @@ class Wisata extends Model
     use HasFactory;
     
     protected $guarded = [];
+
+    
 }
