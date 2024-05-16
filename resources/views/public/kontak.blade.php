@@ -54,22 +54,28 @@
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
+                <a href="https://maps.app.goo.gl/pB9kVaJQuK6oA3ck6" target="blank">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Lokasi:</h4>
                 <p>Belor, Kembangbelor, Kec. Pacet, Kab. Mojokerto, Jawa Timur 61374</p>
               </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
+            </a>
+              <a href="mailto:officialbernahdevallei@gmail.com">
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
                 <p>officialbernahdevallei@gmail.com</p>
-              </div>
+                </div>
+              </a>
+              
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>No Telepon:</h4>
-                <p>+62 813 1144 8049</p>
-              </div>
+              <a href="https://api.whatsapp.com/send/?phone=6281311448049&text&type=phone_number&app_absent=0" target="_blank">
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>No Telepon:</h4>
+                  <p>+62 813 1144 8049</p>
+                </div>
+              </a> 
 
             </div>
 

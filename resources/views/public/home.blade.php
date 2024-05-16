@@ -56,7 +56,8 @@
                   <div class="card-body">
                     <img src="{{ $row->poster_url }}" class="card-img-top" alt="event">
                       <h5 class="card-title text-center fw-bold mt-1 ">{{ $row->title }}</h5>
-                      <p class="card-text text-center fw-bold">Tanggal Mulai: {{ $row->event_started }}</p>
+                      <p class="card-text text-center fw-bold"><i class="bi bi-calendar-week pe-2"></i>  {{ $row->event_started }}</p>
+                      <p class="card-text text-center fw-bold"><i class="bi bi-geo-alt pe-2"></i> {{ $row->event_started }}</p>
                       
                   </div>
               </div>
@@ -203,18 +204,17 @@
         <div class="section-title">
           <h2>Review pengunjung</h2>
         </div>
-
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="assets/img/testimonials/user1.png" class="testimonial-img" alt="">
+                <h3>Dimas Aswito</h3>
+                <h4>Explorer</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Awal saya mengunjungi desa kembang belor hawanya sangat sejuk
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -222,12 +222,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="assets/img/testimonials/user3.png" class="testimonial-img" alt="">
+                <h3>Muhammad Miftachul</h3>
+                <h4>Pengujung Klurak Eco Park</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Tempat yang asyik untuk berkemah (camping). Biaya relatif murah. Disediakan peralatan camping, juga persewaan rumah gubug. Baik yg di lereng ataupun yg di tepi sungai. Ada toilet gratis, musholla, juga kantin atau kafe di tengah hutan bumi perkemahan.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -235,12 +235,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="assets/img/testimonials/user5.png" class="testimonial-img" alt="">
+                <h3>Ikka Darmawan</h3>
+                <h4>Pengunjung Bernah De Vallei</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  View pemandangannya Bagus,Alami.Spot fotonya juga bagus,Kolam renangnya Bersih,Pelayanannya ramah dan memuaskan.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -248,12 +248,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <img src="assets/img/testimonials/user4.png" class="testimonial-img" alt="">
+                <h3>Bang ivann</h3>
+                <h4>Pengunjung Bernah De Vallei</h4>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i> 
+                  Masya ALLAH...Tempat wisata untuk kluarga yang nyaman , sejuk dan indah lokasinya ...keren luurr....Air kolame suegeerr...Suasananya sejuukk... recommended banget buat wisata kluarga...kantinnya ok...mantab..kopinya apalagi nii...        😍😍👍👍👍👍
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -261,16 +261,17 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="assets/img/testimonials/user2.png" class="testimonial-img" alt="">
+                <h3>Sari Purtri</h3>
+                <h4>Pengujung Klurak Eco Park</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Nyaman sejuk dan terawat banget tempatnya. Cocok untuk me time bareng kluarga tercinta tersedia kolam renang anak yang aman, untuk harga masuk juga ekonomis banget. View juga bagus apa lagi dekat sungai. Yang mau paket lengkap buat campaign ada say.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
+
 
           </div>
           <div class="swiper-pagination"></div>

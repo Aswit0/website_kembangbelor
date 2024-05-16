@@ -35,10 +35,10 @@
           </nav><!-- .navbar -->
     
           <div class="header-social-links">
-            <a href="#" class="twitter"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
+            {{-- <a href="https://www.youtube.com/@HavaChannel" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a> --}}
+            <a href="https://www.facebook.com/bernahofficial" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/bernahdevalleipacet?igsh=bmk1Y2N5ejg3Z3V0" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@bernahdevalleipacet?_t=8mMemlj4JWh&_r=1" class="tiktok" target="_blank"  ><i class="bi bi-tiktok"></i></i></a>
           </div>
     
         </div>
