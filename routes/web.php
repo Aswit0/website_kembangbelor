@@ -27,7 +27,9 @@ Route::get('/wisata-details/{id}', [HomeController::class,'show'])->name('show')
 Route::get('/about', function () {
     return view('public/aboutus');
 });
-
+Route::get('/download', function () {
+    return view('public/mobileapp');
+});
 
 //Admin
 

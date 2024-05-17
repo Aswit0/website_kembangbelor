@@ -30,6 +30,7 @@
               <li><a href="/wisata">Wisata</a></li>
               <li><a href="/galeri">Galeri</a></li>
               <li><a href="/kontak">Kontak</a></li>
+              <li><a href="/mobileapp">Download App</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
