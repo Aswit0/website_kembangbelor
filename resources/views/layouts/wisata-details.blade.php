@@ -65,7 +65,7 @@
                 <div class="card mt-3">
                     <div class="card-body">
                         <h5 class="card-title">Lokasi Wisata</h5>
-                        <iframe src="{{ $wisata->maps }}" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            </div>
+                        <iframe src="{{ $wisata->mapsView }}" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            </div>
                 </div>
             </div>
         </div>

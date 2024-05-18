@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         $data = Event::all(); // Correct usage of Acara model
         $wisata = Wisata::latest()->take(3)->get(); // Correct usage of Acara model
-        return view('public/home', compact('data','wisata'));
+        return view('public.home', compact('data','wisata'));
     }
 
 

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class kritiksaran extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama','email','tujuan','pesan'];
+    protected $guarded = [];
 }

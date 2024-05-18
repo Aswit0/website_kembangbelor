@@ -7,12 +7,11 @@ use App\Models\kritiksaran;
 
 class kritiksaranConroller extends Controller
 {
-    public function kontak(){
-        return view('public/kontak');
-    }
-
     public function insertData(Request $request){
         kritiksaran::create($request->all());
         return redirect()->route('kontak');
+    }
+    public function kontak(){
+        return view('public.kontak');
     }
 }

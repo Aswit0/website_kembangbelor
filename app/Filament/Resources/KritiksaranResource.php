@@ -6,7 +6,7 @@ use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use App\Models\Kritiksaran;
+use App\Models\kritiksaran;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Select;
@@ -29,10 +29,16 @@ class KritiksaranResource extends Resource
             ->schema([
                 Card::make()
                     ->schema([
-                        TextInput::make('nama')->required(),
-                        TextInput::make('email')->required(),
-                        TextInput::make('tujuan')->required(),
-                        TextInput::make('pesan')->required()
+                        TextInput::make('nama')->required()->label('Nama'),
+                        TextInput::make('email')->required()->label('Email'),
+                        Select::make('tujuan')->required()->label('Tujuan')
+                            ->options([
+                                'pertanyaan' => 'Pertanyaan',
+                                'kritiksaran' => 'Kritik dan Saran',
+                            ]),
+                        TextInput::make('pesan')->required()->label('Pesan'),
+
+
                     ])
                     ->columns(1),
             ]);
@@ -42,16 +48,15 @@ class KritiksaranResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('nama'),
-                TextColumn::make('email'),
-                TextColumn::make('tujuan'),
-                TextColumn::make('pesan'),
+                TextColumn::make('nama')->sortable()->searchable(),
+                TextColumn::make('email')->sortable()->searchable(),
+                TextColumn::make('tujuan')->sortable()->searchable(),
+                TextColumn::make('pesan')->sortable()->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([

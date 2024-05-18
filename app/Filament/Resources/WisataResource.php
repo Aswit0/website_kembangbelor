@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Wisata;
+use App\Models\wisata;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -32,11 +32,12 @@ class WisataResource extends Resource
                 TextInput::make('name')->required()->label('Nama Wisata'),
                 TextInput::make('desc')->required()->label('Deskripsi'),
                 TextInput::make('htm')->required()->label('Tiket Masuk'),
-                FileUpload::make('imageUrl')->required()->directory('wisata')->label('Gambar'),
                 TextInput::make('whatsapp')->required()->label('Nomor'),
                 TextInput::make('maps')->required()->label('Maps'),
+                TextInput::make('mapsView')->required()->label('Tampilan Maps'),
                 TimePicker::make('jamBuka')->required()->label('Jam Buka'),
                 TimePicker::make('jamTutup')->required()->label('Jam Tutup'),
+                FileUpload::make('imageUrl')->required()->label('Gambar')->directory('wisata'),
             ]);
     }
 
@@ -44,12 +45,12 @@ class WisataResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Nama Wisata'),
-                TextColumn::make('desc')->label('Deskripsi'),
+                TextColumn::make('name')->label('Nama Wisata')->sortable()->searchable(),
+                TextColumn::make('desc')->label('Deskripsi')->limit(30),
                 TextColumn::make('htm')->label('Tiket Masuk'),
                 ImageColumn::make('imageUrl')->label('Gambar'),
                 TextColumn::make('whatsapp')->label('Nomor'),
-                TextColumn::make('maps')->label('Maps'),
+                TextColumn::make('maps')->label('Maps')->limit(10),
                 TextColumn::make('jamBuka')->label('Jam Buka'),
                 TextColumn::make('jamTutup')->label('Jam Tutup'),
             ])

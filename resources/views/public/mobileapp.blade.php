@@ -27,34 +27,21 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <style>
-        body,
-        html {
-            height: 213%;
-            margin: 0;
-        }
-
-        body {
-            background-image: url('assets/img/kembangbelor.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-        }
-    </style>
 </head>
 
 <body>
 
     @include('layouts.navbar')
 
-    <main id="main">
-
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
+    <img src="assets/img/kembangbelor.png" alt="app poster" class="img-thumbnail">
+    <div class="container text-center my-4">
+        <a href="https://drive.google.com/file/d/1Ptecbjm20m-WPorKCC9cuYqV6L1ycpIz/view?usp=sharing" class="btn btn-success mx-auto">Download App</a>
+    </div>
+    
     @include('layouts.footer')
-    <!-- End  Footer -->
+    @include('layouts.float-button')
+    
+
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

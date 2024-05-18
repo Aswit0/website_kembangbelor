@@ -20,4 +20,9 @@ class event extends Model
                 return 'Unknown Location';
         }
     }
+
+    // public function wisata()
+    // {
+    //     return $this->belongsTo(event::class, 'location');
+    // }
 }

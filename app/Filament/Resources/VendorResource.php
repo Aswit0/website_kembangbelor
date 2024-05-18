@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Vendor;
+use App\Models\vendor;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -35,13 +35,11 @@ class VendorResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('user_id'),
-                TextColumn::make('id_event'),
-                TextColumn::make('needed_at'),
-                TextColumn::make('tanggal_daftar'),
-                ToggleColumn::make('is_accept'),                
-                TextColumn::make('title'),
-                ImageColumn::make('id_event.poster_url'),
+                TextColumn::make('user_id')->limit(10)->label('Id Pengguna')->sortable()->searchable(),
+                TextColumn::make('event.title')->label('Nama Event'),
+                TextColumn::make('needed_at')->label('Kebutuhan')->sortable()->searchable(),
+                TextColumn::make('tanggal_daftar')->label('Tanggal Pendaftaran')->sortable()->searchable(),
+                ToggleColumn::make('is_accept')->label('Disetujui'),
             ])
             ->filters([
                 //

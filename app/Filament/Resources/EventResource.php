@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Event;
+use App\Models\event;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -51,11 +51,11 @@ class EventResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('location')->label('Lokasi'),
-                ImageColumn::make('poster_url')->label('Gambar'),
-                TextColumn::make('title')->label('Judul'),
-                TextColumn::make('description')->label('Deskripsi'),
+                ImageColumn::make('poster_url')->label('Gambar')->sortable()->searchable(),
+                TextColumn::make('title')->label('Event')->sortable()->searchable(),
+                TextColumn::make('description')->label('Deskripsi')->limit(30)->sortable()->searchable(),
                 TextColumn::make('event_needed')->label('Kebutuhan Event'),
-                TextColumn::make('event_started')->label('Event Dimulai'),
+                TextColumn::make('event_started')->label('Event Dimulai')->sortable()->searchable(),
                 ToggleColumn::make('is_open')->label('Terbuka'),                
             ])
             ->filters([

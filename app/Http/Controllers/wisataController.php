@@ -11,7 +11,7 @@ class wisataController extends Controller
     public function wisata(){
         $wisata = Wisata::all(); 
         
-        return view('public/wisata', compact('wisata'));
+        return view('public.wisata', compact('wisata'));
     }
 
     public function show(string $id): View
