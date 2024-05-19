@@ -55,27 +55,14 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/klurak1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>Klurak Eco Park</h4>
+                <p>Klurak Eco Park</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-fullscreen"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-fullscreen"></i></a>
+                  <a href="assets/img/klurak1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
                 </div>
               </div>
             </div>
@@ -83,12 +70,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/bernah1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>Bernah De Vallei</h4>
+                <p>Bernah De Vallei</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-fullscreen"></i></a>
+                  <a href="assets/img/bernah1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
                 </div>
               </div>
             </div>
@@ -96,25 +83,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <img src="assets/img/klurak2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
+                <h4>Klurak Eco Park</h4>
+                <p>Klurak Eco Park</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-fullscreen"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-fullscreen"></i></a>
+                  <a href="assets/img/klurak2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
                 </div>
               </div>
             </div>
@@ -122,12 +96,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <img src="assets/img/bernah2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
+                <h4>Bernah De Vallei</h4>
+                <p>Bernah De Vallei</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-fullscreen"></i></a>
+                  <a href="assets/img/bernah2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
                 </div>
               </div>
             </div>
@@ -135,12 +109,25 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <img src="assets/img/klurak3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
+                <h4>Klurak Eco Park</h4>
+                <p>Klurak Eco Park</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-fullscreen"></i></a>
+                  <a href="assets/img/klurak3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/bernah3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bernah De Vallei</h4>
+                <p>Bernah De Vallei</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/bernah3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></a>
                 </div>
               </div>
             </div>
@@ -148,26 +135,51 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <img src="assets/img/klurak4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>Klurak Eco Park</h4>
+                <p>Klurak Eco Park</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-fullscreen"></i></a>
+                  <a href="assets/img/klurak4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="assets/img/bernah4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Bernah De Vallei</h4>
+                <p>Bernah De Vallei</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-fullscreen"></i></a>
-bi bi-fullscreen                </div>
+                  <a href="assets/img/bernah4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/klurak5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Klurak Eco Park</h4>
+                <p>Klurak Eco Park</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/klurak5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>bi bi-fullscreen</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/bernah5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bernah De Vallei</h4>
+                <p>Bernah De Vallei</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/bernah5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"></a>
+                </div>
               </div>
             </div>
           </div>
@@ -175,7 +187,7 @@ bi bi-fullscreen                </div>
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
 
   </main><!-- End #main -->
 
