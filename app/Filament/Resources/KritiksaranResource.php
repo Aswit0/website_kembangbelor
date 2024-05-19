@@ -21,7 +21,7 @@ class KritiksaranResource extends Resource
 {
     protected static ?string $model = Kritiksaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
 
     public static function form(Form $form): Form
     {

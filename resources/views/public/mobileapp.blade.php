@@ -33,7 +33,7 @@
 
     @include('layouts.navbar')
 
-    <img src="assets/img/kembangbelor.png" alt="app poster" class="img-thumbnail">
+    <img src="assets/img/kembangbelor.png" alt="app poster" class="img-thumbnail mt-5">
     <div class="container text-center my-4">
         <a href="https://drive.google.com/file/d/1Ptecbjm20m-WPorKCC9cuYqV6L1ycpIz/view?usp=sharing" class="btn btn-success mx-auto">Download App</a>
     </div>
@@ -53,9 +53,8 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>

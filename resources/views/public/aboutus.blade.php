@@ -22,7 +22,6 @@
   <link href="build/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="build/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="build/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="build/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="build/assets/css/style.css" rel="stylesheet">
@@ -117,9 +116,7 @@
 <script src="build/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="build/assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="build/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="build/assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="build/assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="build/assets/vendor/php-email-form/validate.js"></script>
 
 <script src="build/assets/js/main.js"></script>
 
