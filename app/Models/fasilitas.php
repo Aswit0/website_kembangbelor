@@ -12,6 +12,6 @@ class fasilitas extends Model
 
     public function wisata()
     {
-        return $this->belongsTo(Wisata::class, 'parentTourism');
+        return $this->belongsTo(wisata::class, 'parentTourism');
     }
 }

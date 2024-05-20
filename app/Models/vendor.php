@@ -12,6 +12,6 @@ class vendor extends Model
     
     public function event()
     {
-        return $this->belongsTo(Event::class, 'id_event');
+        return $this->belongsTo(event::class, 'id_event');
     }
 }

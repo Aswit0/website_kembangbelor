@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\wisata;
 use Filament\Forms\Form;
 use App\Models\fasilitas;
 use Filament\Tables\Table;
@@ -29,15 +30,13 @@ class FasilitasResource extends Resource
 
     public static function form(Form $form): Form
     {
+        $tourismLocations = wisata::pluck('name', 'id');
         return $form
             ->schema([
                 Select::make('parentTourism')->label('Lokasi')
-                ->options([
-                    '1' => 'Bernah De Valley',
-                    '2' => 'Klurak Eco Park',
-                ]),
+                    ->options($tourismLocations),
                 TextInput::make('facilityName')->label('Fasilitas'),
-                FileUpload::make('immersive_picture')->label('Gambar'),
+                FileUpload::make('immersive_picture')->directory('fasilitas')->label('Gambar'),
             ]);
     }
 

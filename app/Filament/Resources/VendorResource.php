@@ -19,7 +19,7 @@ use App\Filament\Resources\VendorResource\RelationManagers;
 
 class VendorResource extends Resource
 {
-    protected static ?string $model = Vendor::class;
+    protected static ?string $model = vendor::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-envelope';
 

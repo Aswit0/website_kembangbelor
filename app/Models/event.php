@@ -7,22 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class event extends Model
 {
+    use HasFactory;
     protected $guarded = [];
-
-    public function getLocationAttribute($value)
+    
+    public function wisata()
     {
-        switch ($value) {
-            case 1:
-                return 'Bernah de Vallei';
-            case 2:
-                return 'Klurak Eco Park';
-            default:
-                return 'Unknown Location';
-        }
+        return $this->belongsTo(wisata::class, 'location');
     }
 
-    // public function wisata()
-    // {
-    //     return $this->belongsTo(event::class, 'location');
-    // }
 }

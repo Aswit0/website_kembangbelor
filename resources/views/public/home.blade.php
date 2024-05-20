@@ -57,7 +57,7 @@
                     <img src="{{ $row->poster_url }}" class="card-img-top" alt="event">
                       <h5 class="card-title text-center fw-bold mt-1 ">{{ $row->title }}</h5>
                       <p class="card-text text-center fw-bold"><i class="bi bi-calendar-week pe-2"></i>  {{ $row->event_started }}</p>
-                      <p class="card-text text-center fw-bold"><i class="bi bi-geo-alt pe-2"></i> {{ $row->event_started }}</p>
+                      <p class="card-text text-center fw-bold"><i class="bi bi-geo-alt pe-2"></i> {{ $row->wisata->name }}</p>
                       
                   </div>
               </div>
@@ -184,7 +184,7 @@
                           <img src="{{ $row->imageUrl }}" class="card-img-top wisata-img-top" alt="Image">
                           <div class="card-body">
                               <h5 class="card-title">{{ $row->name }}</h5>
-                              <p class="card-text">{{ $row->desc }}</p>
+                              <p class="card-text">{{ Illuminate\Support\Str::limit($row->desc, $limit = 110, $end = '...') }}</p>
                           </div>
                       </div>
                   </a>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\event;
-use App\Models\Wisata;
+use App\Models\wisata;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use App\Models\Acara; // Correct namespace

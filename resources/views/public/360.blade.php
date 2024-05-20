@@ -46,143 +46,31 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Semua</li>
-              <li data-filter=".filter-app">Bernah De Vallei</li>
-              <li data-filter=".filter-card">Klurak Eco Park</li>
-              <!-- <li data-filter=".filter-web">Web</li> -->
-            </ul>
+              @php
+                  $uniqueParentTourisms = $fasilitas->unique('parentTourism');
+              @endphp
+              @foreach ($uniqueParentTourisms as $row)
+                  <li data-filter=".filter-{{ $row->parentTourism }}">{{ $row->wisata->name }}</li>
+              @endforeach
+          </ul>
+          
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/klurak1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Klurak Eco Park</h4>
-                <p>Klurak Eco Park</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/klurak1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                </div>
+          @foreach ($fasilitas as $row)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $row->parentTourism }}">
+              <div class="portfolio-wrap">
+                  <img src="{{($row->immersive_picture) }}" class="img-fluid" alt="{{ $row->facilityName }}">
+                  <div class="portfolio-info">
+                      <h4>{{ $row->wisata->name }}</h4>
+                      <p>{{ $row->facilityName }}</p>
+                  </div>
               </div>
-            </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/bernah1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bernah De Vallei</h4>
-                <p>Bernah De Vallei</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/bernah1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/klurak2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Klurak Eco Park</h4>
-                <p>Klurak Eco Park</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/klurak2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/bernah2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bernah De Vallei</h4>
-                <p>Bernah De Vallei</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/bernah2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/klurak3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Klurak Eco Park</h4>
-                <p>Klurak Eco Park</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/klurak3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/bernah3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bernah De Vallei</h4>
-                <p>Bernah De Vallei</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/bernah3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/klurak4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Klurak Eco Park</h4>
-                <p>Klurak Eco Park</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/klurak4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/bernah4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bernah De Vallei</h4>
-                <p>Bernah De Vallei</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/bernah4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/klurak5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Klurak Eco Park</h4>
-                <p>Klurak Eco Park</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/klurak5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>bi bi-fullscreen</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/bernah5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bernah De Vallei</h4>
-                <p>Bernah De Vallei</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/bernah5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
+      </div>
+      
 
         </div>
 

@@ -19,7 +19,7 @@ use App\Filament\Resources\KritiksaranResource\RelationManagers;
 
 class KritiksaranResource extends Resource
 {
-    protected static ?string $model = Kritiksaran::class;
+    protected static ?string $model = kritiksaran::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
 

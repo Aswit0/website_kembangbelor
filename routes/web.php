@@ -1,17 +1,10 @@
 <?php
 
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\galeriController;
 use App\Http\Controllers\wisataController;
 use App\Http\Controllers\kritiksaranConroller;
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });  
-
-
 
 Route::get('/',[homeController::class,'acara'])->name('acara');
 

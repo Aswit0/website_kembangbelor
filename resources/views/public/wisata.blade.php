@@ -48,7 +48,7 @@
                         <img src="{{ $row->imageUrl }}" class="card-img-top wisata-img-top" alt="Image">
                         <div class="card-body">
                             <h5 class="card-title">{{ $row->name }}</h5>
-                            <p class="card-text">{{ $row->desc }}</p>
+                            <p class="card-text">{{ Illuminate\Support\Str::limit($row->desc, $limit = 110, $end = '...') }}</p>
                         </div>
                     </div>
                 </a>
